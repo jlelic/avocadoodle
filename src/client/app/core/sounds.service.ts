@@ -15,11 +15,11 @@ export class SoundsService {
   }
 
   playLoss() {
-    this.playRandomSound(['zobrat-beta-key']);
+    // this.playRandomSound(['zobrat-beta-key']);
   }
 
   playOneLeft() {
-    this.playRandomSound(['to-je-retardacia']);
+    // this.playRandomSound(['to-je-retardacia']);
   }
 
   playChooseWord() {

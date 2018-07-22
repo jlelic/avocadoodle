@@ -41,7 +41,6 @@ export class GameComponent implements OnInit, OnDestroy {
   thickness = 1;
   color: string = 'black';
   tool: string = 'brush';
-  kaiImage;
   isPlaying = false;
   roundResults = null;
   gameResults = null;
@@ -74,9 +73,6 @@ export class GameComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.communication.init();
-
-    this.kaiImage = new Image();
-    this.kaiImage.src = 'assets/presets/kai.png';
 
     const canvas = this.canvas.nativeElement;
     canvas.height = this.height;
@@ -275,9 +271,6 @@ export class GameComponent implements OnInit, OnDestroy {
 
   onColorSelected(color: string) {
     this.color = color;
-    if (this.tool == 'kai') {
-      this.tool = 'brush';
-    }
   }
 
   onThicknessSelected(thickness: number) {
@@ -405,9 +398,6 @@ export class GameComponent implements OnInit, OnDestroy {
         break;
       case 'eraser':
         this.processDrawMessage({ ...data, color: 'white', tool: 'brush' }, false);
-        break;
-      case 'kai':
-        this.context.drawImage(this.kaiImage, x - 128, y - 400);
         break;
       case 'clear':
         this.drawHistory = [];

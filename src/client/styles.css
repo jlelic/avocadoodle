@@ -1,7 +1,7 @@
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 
 body {
-  background-color: #d1b796;
+  background-color: rgba(116, 247, 9, 0.25);
   font-family: Arial;
 }
 

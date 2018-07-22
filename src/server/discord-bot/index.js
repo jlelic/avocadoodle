@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const token = process.env.DISCORD_BOT_TOKEN || require('./bot-token');
 
-const CHANNEL_NAME = 'kaidoodle';
+const CHANNEL_NAME = 'avocadoodle';
 
 const client = new Discord.Client();
 
@@ -27,7 +27,7 @@ client.on("ready", () => {
     }
   });
 
-  client.user.setActivity(`http://kaidoodle.herokuapp.com`);
+  client.user.setActivity(`http://avocadoodle.herokuapp.com`);
 });
 
 // client.on("guildCreate", guild => {
