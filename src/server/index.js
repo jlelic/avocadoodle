@@ -163,7 +163,7 @@ const prepareRound = () => {
     return;
   }
 
-  WordModel.findRandom({ $or: [{ deleted: false }, { deleted: null }] }, {}, { limit: 1 + Math.round(Math.random() * 8) }, function(err, randomWords) { // dooes't work with promises :(
+  WordModel.findRandom({ $or: [{ deleted: false }, { deleted: null }] }, {}, { limit: 3 + Math.round(Math.random() * 6) }, function(err, randomWords) { // dooes't work with promises :(
     if (err) {
       endGame();
       sendChatMessageToAllPlayers('Error occured');
