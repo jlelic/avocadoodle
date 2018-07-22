@@ -59,11 +59,6 @@ client.on("message", async message => {
     })
   }
 
-  if (message.content.toLowerCase().includes('raw')) {
-    const m = await message.channel.send("coze?");
-    m.edit(`Do pici vypadni s tou brawlhallou odtialto ${message.author.username}`);
-  }
-
   if (message.author.username != 'Jožo'){
     return;
   }
