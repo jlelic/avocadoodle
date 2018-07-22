@@ -11,8 +11,7 @@ export class ToolbarComponent implements OnInit{
   tools = [
     'brush',
     'bucket',
-    'eraser',
-    'kai'
+    'eraser'
   ];
 
   private _tool: string = 'brush';
